@@ -2,3 +2,4 @@
 tmp_files_radar/
 !/tmp_files_radar/.gitkeep
 tmp_image.gif
+__pycache__/
