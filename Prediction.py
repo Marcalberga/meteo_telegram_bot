@@ -52,6 +52,7 @@ class Comarcal:
         return prec_map.get(value)
 
     def meteo_comarca(self, text):
+        text.replace("/", "")
         # TODO: Solucionar "Pla d'urgell" "Pla de l'estany" "Pallars Jussà" per el replace "la"
         id_comarca = 0
 

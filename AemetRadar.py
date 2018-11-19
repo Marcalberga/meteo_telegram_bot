@@ -6,7 +6,7 @@ project_path = os.getcwd()
 class Radar:
     last_radar_filename = ""
 
-    def get_radar(self=None):
+    def get_radar(self):
         radar_url = "http://www.aemet.es/imagenes_d/eltiempo/observacion/radar/%year%month%day%hour%minute_r8ba.gif"
         print (radar_url)
         now = datetime.datetime.utcnow()
@@ -19,7 +19,7 @@ class Radar:
 
         print(radar_url.replace('%year', year).replace('%month', month).replace("%day", day).replace("%hour", hour).replace("%minute", minute))
 
-        filename = project_path + "/" + year + month + day + hour + minute +".gif"
+        filename = project_path + "/tmp_files_radar/" + year + month + day + hour + minute +".gif"
 
         if not os.path.exists(filename):
             r = requests.get(

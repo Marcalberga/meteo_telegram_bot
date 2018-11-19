@@ -19,6 +19,7 @@ updates = requests.request("GET", baseUrl + "getUpdates").json()
 lastUpdate = False
 
 comarcal = Comarcal()
+radar = Radar()
 
 while True:
     if not lastUpdate:
@@ -42,7 +43,7 @@ while True:
         }
 
         if text_rebut == "radar":
-            radar_image = Radar.get_radar()
+            radar_image = radar.get_radar()
             body_resposta = {
                 "chat_id": result['message']['chat']['id'],
             }
